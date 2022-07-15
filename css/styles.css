@@ -1,0 +1,74 @@
+@import url(../css/fonts.css);
+
+body {
+    margin: 0;
+    background-color: #FFFCEB;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 12px;
+    gap: 12px;
+}
+
+.homepage {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.body-text {
+    text-align: justify;
+    font-family: "NotoSerif";
+    color:gray;
+}
+
+h1 {
+    font-family: "Octarine";
+    font-weight: lighter;
+    font-size: 6rem;
+}
+
+.nav {
+    font-family: "Octarine";
+}
+
+.span-3x1 {
+    grid-column: auto / span 3;
+}
+
+.span-5x1 {
+    grid-column: auto / span 5;
+}
+
+.span-4x1 {
+    grid-column: auto / span 4;
+}
+
+#about-title {
+    grid-column-start: 4;
+}
+
+#me-title {
+    grid-column-start: 9;
+}
+
+.img-me {
+    grid-column-start: 9;
+    grid-row: auto / span 30;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../assets/me.jpg");
+}
+
+@media (max-width: 576px) { 
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        margin: 12px;
+    }
+ }

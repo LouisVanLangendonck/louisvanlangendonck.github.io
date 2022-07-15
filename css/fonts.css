@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: "Octarine";
+    src: '../fonts/OctarineFree/Octarine-Light.otf';
+}
+
+@font-face {
+    font-family: "NHaas";
+    src: url('../fonts/NHaas/NHaasGroteskTXPro-55Rg.ttf');
+}
+
+@font-face {
+    font-family: "NotoSerif";
+    src: url('../fonts/NotoSerif/NotoSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: "fashion";
+    src: url('../fonts/Normande/Normande\ Regular.otf');
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url('../fonts/Helvetica-Neue-Font/Helvetica\ Neue\ W01\ 66\ Medium\ It.otf');
+}
+
