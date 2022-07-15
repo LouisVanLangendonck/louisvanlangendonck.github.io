@@ -24,3 +24,8 @@
     src: url('../fonts/Helvetica-Neue-Font/Helvetica\ Neue\ W01\ 66\ Medium\ It.otf');
 }
 
+@font-face {
+    font-family: "ComputerModern";
+    src: url('../fonts/ComputerModern/cmunbmr.ttf');
+}
+
