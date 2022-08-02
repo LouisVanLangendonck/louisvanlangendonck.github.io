@@ -183,14 +183,15 @@ h2 {
     padding: 25px;
 }
 
-#project-img {
+.project-img-II {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
     overflow: hidden;
     display: block;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
+    /* filter: drop-shadow(0px 0px 10px lightgray); */
 }
 
 .container-project {
@@ -203,7 +204,7 @@ h2 {
 
 .project-descr-II {
     display: grid;
-    grid-column: 6/12;
+    grid-column: 5/10;
     grid-row: 1/2;
     grid-template-columns: auto;
     grid-template-rows: 1fr 2fr;
@@ -213,22 +214,37 @@ h2 {
     text-align: justify;
 }
 
-.project-img-II {
+.project-img-div-II {
     display: grid;
-    grid-column: 1/7;
+    grid-column: 3/7;
     grid-row: 2/3;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    border: 2px solid;
-    border-color: lightgray;
+    position: relative;
+    overflow: hidden;
+    padding-right: 0;
+    gap: 0;
+}
+
+.fade-project-img-right {
+    height: 100%;
+    position:absolute;
+    right: 0;
+    background: -webkit-linear-gradient(right, 
+                #EFEDE1 20%,
+                transparent
+    );
 }
 
 .project-body-II {
     display: grid;
-    grid-column: 7/12;
+    grid-column: 7/10;
     grid-row: 2/3;
     grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 2fr;
+    text-align: justify;
+    font-family: "iAWriter";
+    color:#3C3A38;
 }
 
 .project-title-II {
@@ -238,12 +254,27 @@ h2 {
     color: #3C3A38;
 }
 
-.project-head-descr-II {
+.project-head-descr-container-II {
+    display: grid;
+    grid-row: 2;
+    grid-template-columns: 1fr 5fr;
     text-align: justify;
     font-family: "iAWriter";
     color:gray;
 }
 
+.project-head-rect-II {
+    width: auto;
+    height: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    background: gray;
+}
+
+.git-link-proj {
+    color: gray;
+    text-align: justify;
+}
 
 /* .project-div {
     display: grid;
