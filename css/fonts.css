@@ -29,3 +29,13 @@
     src: url('../fonts/ComputerModern/cmunbmr.ttf');
 }
 
+@font-face {
+    font-family: iAWriter;
+    src: url(../fonts/iAWriter/iAWriterQuattroSRegular.ttf);
+}
+
+@font-face {
+    font-family: BauPro;
+    src: url(../fonts/BauPro/BauPro.ttf);
+}
+
