@@ -3,6 +3,7 @@
 body {
     margin: 0;
     background-color: #EFEDE1;
+    overflow-y: hidden;
 }
 
 .span-1x1 {
@@ -164,11 +165,7 @@ h2 {
 
 #drawing-canvas {
     position: absolute;
-    display: grid;
-    grid-column: 5 / 12;
-    grid-row: auto / span 3;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    z-index: -2;
 }
 
 #projects-title-I {
