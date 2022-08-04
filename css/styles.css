@@ -68,6 +68,7 @@ body {
     padding: 12px;
     gap: 24px;
     grid-template-rows: 1fr 1fr 7fr;
+    position: relative;
 }
 
 .homepage {
@@ -159,6 +160,15 @@ h2 {
     font-family: "iAWriter";
     text-align: justify;
     color: gray;
+}
+
+#drawing-canvas {
+    position: absolute;
+    display: grid;
+    grid-column: 5 / 12;
+    grid-row: auto / span 3;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
 
 #projects-title-I {
