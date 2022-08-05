@@ -10,41 +10,37 @@
 <body>
     <canvas id="drawing-canvas">
     </canvas>
-    <div class="container nav">
-        <div class="nav-item span-3x1" style="grid-column-start: 2;">
-            <a class="nav-link" href="index.html">
-                About Me
-            </a>
-            
+    <div class="container">
+        <div class="navbar">
+            <div class="container-nav-item">
+                <a class="nav-item active" id="about" href="">About Me ></a>
+            </div>
+            <div class="container-nav-item">
+                <a class="nav-item" id="" href="">Projects ></a>
+            </div>
+            <div class="container-nav-item">
+                <a class="nav-item" href="">Curriculum Vitae ></a>
+            </div>
         </div>
-        <div class="nav-item span-3x1">
-            <a class="nav-link" href="projects.html">
-                Projects
-            </a>
+        <div class="about">
+            <div id="first-name">Louis</div>
+            <div id="sir-name">Van Langendonck</div>
+            <div id="about-undertitle">
+                An international student intrigued by AI and Data Science
+            </div>
+            <div id="about-maintext">
+                I am currently doing a Master in Data Science 
+                at the Polytechnical University of Barcelona (UPC). I have a Bachelor degree in Physics, during which I have discovered my love
+                for rigorous academic research. My goal is to gain experience in different relevant fields and eventually obtain a PhD in a computer science topic I 
+                am fascinated about.
+            </div> 
         </div>
-        <div class="nav-item span-4x1 uit-elkaar">
-            Curriculum Vitae
-            <button type="submit" class="mail-button">
-                <img src="./assets/mail-01.png" width="30" alt="submit" />
-           </button>
+        <div class="menu-item" id="research-interests">
+            Research Interests >
         </div>
-    </div>
-    <!--  -->
-    <div class="container-about">
-        <div class="about-title">
-            <div id="i-am">I Am</div>
-            <div id="name">Louis Van Langendonck</div>
-        </div>
-        <div class="about-undertitle">
-            An international student intrigued by AI and Data Science
-        </div>
-        <div class="about-maintext">
-            I am currently doing a Master in Data Science 
-            at the Polytechnical University of Barcelona (UPC). I have a Bachelor degree in Physics, during which I have discovered my love
-            for rigorous academic research. My goal is to gain experience in different relevant fields and eventually obtain a PhD in a topic I 
-            am fascinated about.
-        </div>
-        <script src="js/script.js"></script>
+        <div class="menu-item" id="contact">
+            Contact >
+        </div>       
     </div>
         <!-- <h1 class="span-3x1" id="about-title">About</h1><h1 class="span-3x1" id="me-title">Me</h1>
         <div class="span-5x1 img-me"></div>
@@ -94,6 +90,9 @@
     </div>
 </body>
 </html>
+
+<script src="js/branch.js"></script>
+<script src="js/main.js"></script>
 
 
 <!-- I am an international student intrigued by AI and Data Science and thus I am  currently doing a Master in Data Science 

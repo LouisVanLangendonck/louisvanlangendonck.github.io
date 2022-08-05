@@ -6,83 +6,6 @@ body {
     overflow-y: hidden;
 }
 
-.span-1x1 {
-    grid-column: auto / span 1;
-}
-
-.span-2x1 {
-    grid-column: auto / span 2;
-}
-
-.span-3x1 {
-    grid-column: auto / span 3;
-}
-
-.span-4x1 {
-    grid-column: auto / span 4;
-}
-
-.span-5x1 {
-    grid-column: auto / span 5;
-}
-
-.span-6x1 {
-    grid-column: auto / span 6;
-}
-
-.span-7x1 {
-    grid-column: auto / span 7;
-}
-
-.span-8x1 {
-    grid-column: auto / span 8;
-}
-
-.span-9x1 {
-    grid-column: auto / span 9;
-}
-
-.span-10x1 {
-    grid-column: auto / span 10;
-}
-
-.span-11x1 {
-    grid-column: auto / span 11;
-}
-
-.span-12x1 {
-    grid-column: auto / span 12;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    padding: 12px;
-    gap: 24px;
-}
-
-
-.container-about {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    height: 100vh;
-    padding: 12px;
-    gap: 24px;
-    grid-template-rows: 1fr 1fr 7fr;
-    position: relative;
-}
-
-.homepage {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.body-text {
-    text-align: justify;
-    font-family: "iAWriter";
-    color:gray;
-}
-
 h1 {
     font-family: "BauPro";
     font-weight: lighter;
@@ -97,70 +20,92 @@ h2 {
     color: #3C3A38;
 }
 
-.small-title
-    {
-        grid-column-start: 1;
-        margin-top: 100px;
-    }
+a {
+    text-decoration: none;
+}
 
-.nav {
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 100vh;
+    padding: 12px;
+    grid-template-rows: repeat(12,1fr);
+    position: relative;
+    margin-top: 20px;
+}
+
+.navbar {
+    display: grid;
+    grid-column: 1/5;
+    grid-row: inherit;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.container-nav-item {
+    position: relative;
     font-family: "BauPro";
-    color: #3C3A38;
+    font-weight: bold;
+    border-bottom: 1px solid #3C3A38 ;
 }
 
 .nav-item {
-    align-self: center;
+    position: absolute;
+    bottom: 2px;
+    color: gray;
 }
 
-.mail-button {
-    border: 0; 
-    background: transparent;
+.active {
+    color:black
 }
 
-.uit-elkaar {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
-
-.about-title {
-    margin-top: 50px;
+.about {
     display: grid;
-    grid-column: 2 / 5;
-    grid-row: 1fr 2fr;
+    grid-column: 1/5;
+    grid-row: inherit;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
     border-bottom: 1px solid #3C3A38 ;
-    border-top: 1px solid #3C3A38 ;
 }
 
-#i-am {
+.menu-item {
+    display: grid;
+    grid-column: 1/5;
+    grid-row: inherit;
+    border-bottom: 1px solid #3C3A38 ;
+    font-family: 'iAWriter';
+    align-items: center;
+    color: black;
+}
+
+#first-name {
+    margin-top: 10px;
     font-family: "BauPro";
+    font-weight: bolder;
     font-size: 20px;
 }
 
-#name {
+#sir-name {
     font-family: "BauPro";
-    font-size: 30px; 
-    font-weight: bolder;
+    font-size: 40px; 
+    font-weight: bold;
+    margin: 0;
 }
 
-.about-undertitle {
-    display: grid;
-    grid-column: 2 / 5;
-    grid-row: 2;
-    border-bottom: 1px solid #3C3A38 ;
+#about-undertitle {
     font-family: "iAWriter";
     text-align: justify;
     color: black;
-    font-weight: lighter;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.about-maintext {
-    display: grid;
-    grid-column: 2 / 5;
-    grid-row: 3;
+#about-maintext {
     font-family: "iAWriter";
     text-align: justify;
-    color: gray;
+    color: #3C3A38;
+    margin-bottom: 10px;
 }
 
 #drawing-canvas {
