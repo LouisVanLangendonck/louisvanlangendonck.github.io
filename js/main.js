@@ -17,8 +17,12 @@ const updatePageState = (element) => {
         return true
     }
     else {
-        document.querySelector(".active").classList.remove("active");
+        console.log(document.getElementsByClassName("active")[0]);
+        document.getElementsByClassName("active")[0].classList.remove("active");
+        document.getElementsByClassName("arrow-unactive")[0].classList.remove("arrow-unactive");
         element.classList.add("active");
+        element.firstElementChild.classList.add("arrow-unactive");
+        // 
     }
 }
 
