@@ -8,74 +8,23 @@
     <title>Projects</title>
 </head>
 <body>
-    <div class="container nav">
-        <div class="nav-item span-3x1" style="grid-column-start: 2;">
-            <a class="nav-link" href="index.html">
-                About Me
-            </a>
-            
-        </div>
-        <div class="nav-item span-3x1">
-            <a class="nav-link" href="projects.html">
-                Projects
-            </a>
-        </div>
-        <div class="nav-item span-4x1 uit-elkaar">
-            Curriculum Vitae
-            <button type="submit" class="mail-button">
-                <img src="./assets/mail-01.png" width="30" alt="submit" />
-           </button>
-        </div>
-    </div>
+    <canvas id="drawing-canvas">
+    </canvas>
     <div class="container">
-        <h1 class="span-3x1" id="projects-title-I">Academic</h1>
-        <h1 class="span-3x1" id="projects-title-II">Projects</h1>
-    </div>
-    <div class="container-project">
-        <div class="project-descr-II">
-            <div class="project-title-II">
-                Papers Graph Databases
+        <div class="navbar">
+            <div class="container-nav-item">
+                <a class="nav-item active button" id="about" href="">About Me <span class="arrow arrow-unactive">></span></a>
             </div>
-            <div class="project-head-descr-container-II">
-                <div class="project-head-rect-II"></div>
-                <div class="project-head-descr-II">
-                    Design and load graph database with academical paper data using both GraphDB and Neo4J.
-                </div> 
+            <div class="container-nav-item button">
+                <a class="nav-item" id="" href="">Projects <span class="arrow">></span></a>
+            </div>
+            <div class="container-nav-item button">
+                <a class="nav-item" href="">Curriculum Vitae <span class="arrow">></span></a>
             </div>
         </div>
-            <div class="project-img-div-II">
-                <div class="fade-project-img-right" style="width: 30%;"></div>
-                <img src="./assets/sdm-cover.png" class="project-img-II">
-            </div>
-            <div class="project-body-II">
-                The goal of the project is creating a TBOX, the equivalent of schema definitions for knowledge graphs, 
-                creating an ABOX, the corresponding data instances, linking these together and finally querying it. 
-                The context considers academical papers and relevant concepts like reviews, journal, and conferences. 
-                <a class="git-link-proj" href="https://github.com/LouisVanLangendonck/SDM_distributed_graph_lab">
-                For more information, visit my GitHub page. 
-                </a>
-            </div>
-        </div>
-
-
-            <!-- <div class="project-intro-title">
-                <h2><span>NYPD Police Stops Racial Profiling</span></h2>
-            </div>
-            <div class="project-img-div">
-                
-            </div>
-            <div class="project-intro-text body-text">
-                The goal of this project is to try and predict race based on the different categorical and numerical variables available.
-                The reason behind this choice is two-fold: Firstly, correlations between variables were assessed 
-                and some already insightful results were obtained for some variables in the data set. 
-                Secondly, the debate on Race in America has existed since its foundation as a country, and recently has been back in the news again 
-                regarding Police brutality claims. There are many studies that have already targeted Police data and found a clear racial bias in some of their actions. 
-                This is why it may also be interesting to study further correlations, by looking at how predictive models are able to distinguish the stop and frisk of a Black person, 
-                a White person or a person of different origin (i.e. "Black stops" have higher probability than "White stops" at nighttime).
-            </div>
-        </div> -->
     </div>
-        
-    </div> -->
 </body>
 </html>
+
+<script src="js/branch.js"></script>
+<script src="js/main.js"></script>
