@@ -1,12 +1,3 @@
-let page_state = 0;
-const nav_elements = document.getElementsByClassName('nav-item');
-Array.from(nav_elements).forEach((element) => {
-    element.addEventListener('click', (e) => {
-        e.preventDefault();
-        updatePageState(element)
-    })
-});
-
 const updateButtonState = (button_element,class_name) => {
     console.log("active " + `${class_name}`)
     console.log(document.getElementsByClassName("active " + `${class_name}`))
@@ -17,27 +8,6 @@ const updateButtonState = (button_element,class_name) => {
     }
     button_element.classList.add("active");
     button_element.firstElementChild.classList.add("arrow-unactive");
-}
-
-const updatePageState = (element) => {
-    classArray = Array.from(element.classList)
-    if (classArray.includes("active")){
-        return true
-    }
-    else {
-        updateButtonState(element, 'nav-item');
-        const id = element.id;
-        if (id == 'about') {
-            page_state = 0;
-        }
-        else if (id == 'projects') {
-            page_state = 1;
-        }
-        else if (id == 'cv') {
-            page_state = 2;
-        }
-        console.log(page_state);
-    }
 }
 
 const addContentOnClicks = () => {
