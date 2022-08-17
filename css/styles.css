@@ -394,4 +394,32 @@ input:checked + .slider:before {
     h1 {
         margin: 12px;
     }
+
+    .tree-switch {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #tree-switch-text {
+        display: inline;
+    }
+
+    .switch {
+        display: inline-block;
+        width: 30px;
+        height: 17px;
+    }
+
+    .slider:before {
+        height: 13px;
+        width: 13px;
+        left: 2px;
+        bottom: 2px;
+    }
+    input:checked + .slider:before {
+        -webkit-transform: translateX(13px);
+        -ms-transform: translateX(13px);
+        transform: translateX(13px);
+    }
  }
