@@ -1,10 +1,10 @@
 @import url(../css/fonts.css);
 
 :root {
-    --primary: rgb(145, 168, 195);
-    --primary-light: rgb(233, 240, 248);
+    --primary: #2b2928;
+    --primary-light: lightgray;
     --white: white;
-    --black: #3C3A38;
+    --black: #2b2928;
 }
 
 body {
@@ -29,7 +29,7 @@ h2 {
     grid-template-columns: repeat(9, 1fr);
     height: 100vh;
     margin-left: 24px;
-    margin-right: 12px;
+    margin-right: 24px;
     grid-template-rows: 35px repeat(11,1fr);
     position: relative;
     margin-top: 24px;
@@ -105,7 +105,6 @@ h2 {
     font-weight: bold;
     color: var(--black);
     align-items: center;
-    
 }
 
 #cv {
@@ -132,12 +131,16 @@ h2 {
     display: grid;
     grid-column: 4/11;
     grid-row: 1/13;
-    /* margin-top: 24px; */
     margin-left: 24px;
-    margin-right: 24px;
-    margin-top: 15px;
     row-gap: 24px;
     grid-template-rows: repeat(12, 1fr);
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.container-content::-webkit-scrollbar {
+    display: none;
 }
 
 .container-content-item {
@@ -218,7 +221,8 @@ h2 {
     border-radius: 2px;
     margin-right: 5px;
     margin-left: 5px;
-    line-height: 2em;
+    align-self: center;
+    /* line-height: 2em; */
 }
 
 .container-project-img {
@@ -283,7 +287,6 @@ h2 {
 }
 
 .active {
-    /* font-weight: normal; */
     color: white;
     background-color: var(--primary);
 }
@@ -297,6 +300,11 @@ h2 {
     .container {
         display: flex;
         flex-direction: column;
+        margin: 12px;
+    }
+
+    .navbar {
+        height: 35px;
     }
 
     h1 {
