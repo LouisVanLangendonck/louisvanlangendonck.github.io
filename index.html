@@ -8,8 +8,8 @@
     <title>Louis Van Langendonck</title>
 </head>
 <body>
-    <!-- <canvas id="drawing-canvas">
-    </canvas> -->
+    <canvas id="drawing-canvas">
+    </canvas>
     <div class="container">
         <div class="navbar">
             <div class="container-nav-item">
@@ -19,6 +19,13 @@
                 <a class="nav-item" id="projects" href="projects.html">Projects <span class="arrow">></span></a>
             </div>
         </div>
+        <div class="tree-switch">
+            <p id="tree-switch-text">Generative Tree</p>
+            <label class="switch">
+                <input type="checkbox" id="myCheck" checked>
+                <span class="slider"></span>
+            </label></p>
+        </div>  
         <div class="container-top">
             <div id="name">Louis Van Langendonck</div>
             <div id="about-undertitle">
@@ -43,10 +50,8 @@
                     <a class="menu-item" href="" id="cv-text">Curriculum Vitae<span class="arrow"> ></span></a>
                     <a class="download">Download</a>
                 </div>
-                
-            </div>      
+            </div>
         </div>
-        
         <div class="container-content hidden" id="0">
             <div class="container-content-item">
                 <div class="content-title">
@@ -96,10 +101,15 @@
                     <a href="https://github.com/LouisVanLangendonck" target="_blank" class="intext-link button">https://github.com/LouisVanLangendonck</a>
                 </div>
             </div>
-        </div>   
+        </div>
+        <div class="container-content hidden" id="2">
+            <div class="container-cv-img">
+                <img src="./assets/cv_v1_nobackground.png" id="cv-img" alt="">
+            </div>
+        </div>      
     </div>
 </body>
 </html>
 
-<!-- <script src="js/branch.js"></script> -->
+<script src="js/branch.js"></script>
 <script src="js/main.js"></script>

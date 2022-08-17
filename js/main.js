@@ -1,6 +1,4 @@
 const updateButtonState = (button_element,class_name) => {
-    console.log("active " + `${class_name}`)
-    console.log(document.getElementsByClassName("active " + `${class_name}`))
     const button_list = document.getElementsByClassName("active " + `${class_name}`)[0];
     if (button_list != null){
         document.getElementsByClassName("active " + `${class_name}`)[0].classList.remove("active");
@@ -8,16 +6,6 @@ const updateButtonState = (button_element,class_name) => {
     }
     button_element.classList.add("active");
     button_element.firstElementChild.classList.add("arrow-unactive");
-}
-
-const addContentOnClicks = () => {
-    const content_buttons = document.getElementsByClassName('menu-item');
-    Array.from(content_buttons).forEach((element, idx) => {
-        element.addEventListener('click', (e) => {
-            e.preventDefault();
-            updateContentState(element, idx)
-        })
-    })
 }
 
 const updateContentState = (element, idx) => {
@@ -33,6 +21,35 @@ const updateContentState = (element, idx) => {
         const content_to_show = document.getElementById(`${idx}`)
         content_to_show.classList.remove("hidden")
     }
+}
+
+const updateTreeState = () => {
+    const TreeState = document.getElementById('drawing-canvas')
+    if (TreeState.classList.contains("hidden")) {
+        TreeState.classList.remove("hidden")
+        document.getElementById("myCheck").checked = true;
+    }
+    else {
+        TreeState.classList.add("hidden")
+        document.getElementById("myCheck").checked = false;
+    }
+}
+
+const addContentOnClicks = () => {
+    const content_buttons = document.getElementsByClassName('menu-item');
+    Array.from(content_buttons).forEach((element, idx) => {
+        element.addEventListener('click', (e) => {
+            e.preventDefault();
+            updateContentState(element, idx)
+        })
+    })
+    const tree_button = document.getElementsByClassName('switch')[0];
+    tree_button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        tree_button.checked = true;
+        updateTreeState();
+    })
 }
 
 addContentOnClicks();
