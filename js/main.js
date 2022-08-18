@@ -1,3 +1,14 @@
+var page_state = ''
+ 
+const initialize = () => { 
+    if (window.matchMedia("(max-width: 700px)").matches) {
+        page_state = 'mobile'
+    }
+    else {
+        page_state = 'desktop'
+    }
+}
+
 const updateButtonState = (button_element,class_name) => {
     const button_list = document.getElementsByClassName("active " + `${class_name}`)[0];
     if (button_list != null){
@@ -10,10 +21,12 @@ const updateButtonState = (button_element,class_name) => {
 
 const updateContentState = (element, idx) => {
     if (Array.from(element.classList).includes("active")){
-        return true
+        const content_to_hide = document.getElementById(`${idx}`)
+        content_to_hide.classList.add("hidden")
+        element.classList.remove('active')
     }
     else {
-        updateButtonState(element, 'menu-item');
+        updateButtonState(element, 'container-menu-item');
         Array.from(document.getElementsByClassName('container-content')).forEach((val) => {
             console.log(val.classList)
             val.classList.add('hidden')
@@ -35,21 +48,75 @@ const updateTreeState = () => {
     }
 }
 
+const updateProjectsMenuState = () => {
+    const projects_menu = document.getElementsByClassName('projects-menu')[0];
+    if (Array.from(projects_menu.classList).includes("hidden")) {
+        projects_menu.classList.remove('hidden')
+    }
+    else {
+        projects_menu.classList.add('hidden')
+    }
+}
+
+const updateAboutMenuState = () => {
+    const about = document.getElementById('about-top');
+    const about_menu = document.getElementById('about-menu');
+    if (Array.from(about.classList).includes("hidden")) {
+        about.classList.remove('hidden')
+        about_menu.classList.remove('hidden')
+    }
+    else {
+        about.classList.add('hidden')
+        about_menu.classList.add('hidden')
+    }
+}
 const addContentOnClicks = () => {
-    const content_buttons = document.getElementsByClassName('menu-item');
+    const content_buttons = document.getElementsByClassName('container-menu-item');
     Array.from(content_buttons).forEach((element, idx) => {
         element.addEventListener('click', (e) => {
-            e.preventDefault();
-            updateContentState(element, idx)
+            console.log(element.id)
+            if (element.id == 'cv-download') {
+                return true
+            }
+            else {
+                e.preventDefault();
+                updateContentState(element, idx)
+            }
         })
     })
+
     const tree_button = document.getElementsByClassName('switch')[0];
     tree_button.addEventListener('click', (e) => {
         e.stopPropagation();
         e.preventDefault();
-        tree_button.checked = true;
         updateTreeState();
     })
+
+    const projects_button = document.getElementById('projects-button');
+    if (projects_button !== null) {
+        if (page_state == 'mobile') {
+            projects_button.addEventListener('click', (e) => {
+                e.preventDefault();
+                updateProjectsMenuState();
+            })
+        }
+    }
+
+    const about_button = document.getElementById('about-button');
+    if (about_button !== null) {
+        if (page_state == 'mobile') {
+            about_button.addEventListener('click', (e) => {
+                e.preventDefault();
+                updateAboutMenuState();
+            })
+        }
+    }
 }
 
+initialize();
 addContentOnClicks();
+var x = window.matchMedia("(max-width: 700px)")
+x.addEventListener("change", () => {
+    initialize();
+    }
+);
