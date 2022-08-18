@@ -23,7 +23,7 @@ const updateContentState = (element, idx) => {
     if (Array.from(element.classList).includes("active")){
         const content_to_hide = document.getElementById(`${idx}`)
         content_to_hide.classList.add("hidden")
-        element.classList.remove('active')
+        element.classList.remove("active")
     }
     else {
         updateButtonState(element, 'container-menu-item');
