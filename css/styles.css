@@ -69,6 +69,10 @@ h2 {
     transform: scale(1.2);
 }
 
+.desktop .arrow-unactive {
+    display: none;
+}
+
 .arrow {
     transition: 0.2s;
     position: absolute;
@@ -119,10 +123,6 @@ h2 {
 
 .menu-item span{
     padding-left: 4px;
-}
-
-.minus-sign {
-
 }
 
 .container-content {

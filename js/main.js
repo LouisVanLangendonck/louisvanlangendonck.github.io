@@ -6,6 +6,10 @@ const initialize = () => {
     }
     else {
         page_state = 'desktop'
+        const nav_buttons = document.getElementsByClassName('container-nav-item');
+        Array.from(nav_buttons).forEach((button) => {   
+            button.classList.add('desktop')
+        })
     }
 }
 
@@ -53,26 +57,33 @@ const updateTreeState = () => {
 
 const updateProjectsMenuState = () => {
     const projects_menu = document.getElementsByClassName('projects-menu')[0];
+    const projects_button = document.getElementById('projects-button');
     if (Array.from(projects_menu.classList).includes("hidden")) {
         projects_menu.classList.remove('hidden')
+        projects_button.querySelector(".arrow").textContent = ' -';
     }
     else {
         projects_menu.classList.add('hidden')
+        projects_button.querySelector(".arrow").textContent = ' +';
     }
 }
 
 const updateAboutMenuState = () => {
     const about = document.getElementById('about-top');
     const about_menu = document.getElementById('about-menu');
+    const about_button = document.getElementById('about-button');
     if (Array.from(about.classList).includes("hidden")) {
         about.classList.remove('hidden')
         about_menu.classList.remove('hidden')
+        about_button.querySelector(".arrow").textContent = ' -';
     }
     else {
         about.classList.add('hidden')
         about_menu.classList.add('hidden')
+        about_button.querySelector(".arrow").textContent = ' +';
     }
 }
+
 const addContentOnClicks = () => {
     const content_buttons = document.getElementsByClassName('container-menu-item');
     Array.from(content_buttons).forEach((element, idx) => {
