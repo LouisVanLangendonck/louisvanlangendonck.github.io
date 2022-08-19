@@ -13,10 +13,12 @@ const updateButtonState = (button_element,class_name) => {
     const button_list = document.getElementsByClassName("active " + `${class_name}`)[0];
     if (button_list != null){
         document.getElementsByClassName("active " + `${class_name}`)[0].classList.remove("active");
-        document.querySelectorAll("." + `${class_name}` + " .arrow-unactive")[0].classList.remove("arrow-unactive");
+        button_list.querySelector(".arrow").classList.remove("arrow-unactive");
+        button_list.querySelector(".arrow").textContent=" +";
     }
     button_element.classList.add("active");
-    button_element.firstElementChild.classList.add("arrow-unactive");
+    button_element.querySelector(".arrow").textContent="- ";
+    button_element.querySelector(".arrow").classList.add("arrow-unactive");
 }
 
 const updateContentState = (element, idx) => {
@@ -24,11 +26,12 @@ const updateContentState = (element, idx) => {
         const content_to_hide = document.getElementById(`${idx}`)
         content_to_hide.classList.add("hidden")
         element.classList.remove("active")
+        element.querySelector(".arrow").textContent=" +";
+        element.querySelector(".arrow").classList.remove("arrow-unactive");
     }
     else {
         updateButtonState(element, 'container-menu-item');
         Array.from(document.getElementsByClassName('container-content')).forEach((val) => {
-            console.log(val.classList)
             val.classList.add('hidden')
         })
         const content_to_show = document.getElementById(`${idx}`)
@@ -74,14 +77,8 @@ const addContentOnClicks = () => {
     const content_buttons = document.getElementsByClassName('container-menu-item');
     Array.from(content_buttons).forEach((element, idx) => {
         element.addEventListener('click', (e) => {
-            console.log(element.id)
-            if (element.id == 'cv-download') {
-                return true
-            }
-            else {
-                e.preventDefault();
-                updateContentState(element, idx)
-            }
+            e.preventDefault();
+            updateContentState(element, idx)
         })
     })
 

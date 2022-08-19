@@ -60,17 +60,20 @@ h2 {
 }
 
 
-.button:hover .arrow {
+.button {
     position: relative;
-    left: 5px;
+}
+
+.button:hover .arrow {
+    transform-origin: center;
+    transform: scale(1.2);
 }
 
 .arrow {
+    transition: 0.2s;
+    position: absolute;
+    right: 15px;
     font-family: 'NHaas';
-}
-
-.arrow-unactive {
-    display: none;
 }
 
 .container-top {
@@ -136,8 +139,32 @@ h2 {
 
 .container-cv-img {
     display: grid;
+    grid-row: 2 / span auto;
+}
+
+
+.container-cv {
+    display: grid;
     grid-column: 3/7;
-    margin: 50px;
+    margin: 30px;
+}
+
+#cv-download {
+    display:grid;
+    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 50px;
+}
+
+.download {
+    color: var(--black);
+    padding: 2px 10px;
+    border-radius: 2px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 1px solid var(--black);
+    align-self: center;
+    font-family: 'iAWriter';
 }
 
 #cv-img {
@@ -211,7 +238,6 @@ h2 {
     grid-row: 2;
     font-family: 'iAWriter';
     font-size: smaller;
-    
 }
 
 .label{
@@ -292,17 +318,6 @@ h2 {
 .active .download {
     background-color: var(--white);
     color: var(--black);
-}
-
-.download {
-    background-color: var(--black);
-    color: var(--white);
-    padding: 2px 10px;
-    border-radius: 2px;
-    margin-right: 5px;
-    margin-left: 5px;
-    align-self: center;
-    font-family: 'iAWriter';
 }
 
 .hidden {
