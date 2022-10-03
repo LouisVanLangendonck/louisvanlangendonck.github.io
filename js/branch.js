@@ -12,8 +12,8 @@ class Branch {
         this.width = width;
         this.angle = angle;
         // this.livelihood = livelihood;
-        ctx.strokeStyle = 'white';
-        ctx.fillStyle = 'black';
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'white';
     }
 
     update(){
