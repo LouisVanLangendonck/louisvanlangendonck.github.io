@@ -33,6 +33,7 @@ h2 {
     grid-template-rows: 35px repeat(11,1fr);
     position: relative;
     margin-top: 24px;
+    overflow-y: scroll;
 }
 
 .navbar {
@@ -69,9 +70,9 @@ h2 {
     transform: scale(1.2);
 }
 
-.desktop .arrow-unactive {
+/* .desktop .arrow-unactive {
     display: none;
-}
+} */    
 
 .arrow {
     transition: 0.2s;
